@@ -43,5 +43,59 @@ console.log(vistedCountries)
 	* return true if found false if not
 */
 
+function findValue(arr, search) {
+	let result = false
+	for (i of arr) {
+		if (i === search) {
+			result = true
+			break // stops execution once satisfied
+		}
+	}
+	return result
+}
 
+console.log(findValue(vistedCountries, "Japan"))
 
+// ? Arrays with many different data types
+
+let junkDrawerArray = [
+	"whats up",
+	67,
+	["dog", "cat", "giraffe"],
+	null,
+	false,
+	"potato"
+]
+
+console.log(junkDrawerArray[1])
+
+// ? Nested array
+
+console.log(junkDrawerArray)
+
+// ? How to get the cat out of the bag... erm.... array
+
+console.log(junkDrawerArray[2][1])
+
+/* 
+	? Challenge
+	* create a function called findIndex
+	* it will take an array and search param
+	* iterate over an array
+	* if found, return the index where found item is
+	
+	! HARD MODE - return the index AND the item
+*/
+
+function findIndex(arr, search) {
+	let result = []
+	for (i in arr) {
+		if (arr[i] === search) {
+			result[0] = i
+			result[1] = arr[i]
+		}
+	}
+	return result
+}
+
+console.log(findIndex(vistedCountries, "Poland"))
