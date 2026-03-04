@@ -94,4 +94,20 @@ console.log(newArray.filter(i => i))
 	? Challenge
 	* access Scott's grades and return a GPA into a variable
 	* do it using array methods
+	* GPA sum/number of grades
+
+	! HARD MODE - add the result to the property called gpa
 */
+
+// Using Reduce
+student.gpa = student.grades.reduce((sum, num) => sum + num, 0) / student.grades.length
+console.log(student.gpa)
+
+// Using forEach
+let total = 0
+student.grades.forEach(grade => total += grade)
+
+student.gpaForEach = total / student.grades.length
+
+console.log(student.gpaForEach)
+
